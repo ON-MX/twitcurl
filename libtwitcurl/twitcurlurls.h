@@ -93,8 +93,8 @@ namespace twitterDefaults
 
     /* Favorites URLs */
     const std::string TWITCURL_FAVORITESGET_URL = TWITCURL_BASE_URL + "favorites";
-    const std::string TWITCURL_FAVORITECREATE_URL = TWITCURL_BASE_URL + "favorites/create/";
-    const std::string TWITCURL_FAVORITEDESTROY_URL = TWITCURL_BASE_URL + "favorites/destroy/";
+    const std::string TWITCURL_FAVORITECREATE_URL = TWITCURL_BASE_URL + "favorites/create";
+    const std::string TWITCURL_FAVORITEDESTROY_URL = TWITCURL_BASE_URL + "favorites/destroy";
 
     /* Block URLs */
     const std::string TWITCURL_BLOCKSCREATE_URL = TWITCURL_BASE_URL + "blocks/create/";
