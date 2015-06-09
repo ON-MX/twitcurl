@@ -1116,9 +1116,10 @@ bool twitCurl::favoriteGet()
 bool twitCurl::favoriteCreate( const std::string& statusId )
 {
     /* Prepare URL */
-    std::string buildUrl = twitCurlDefaults::TWITCURL_PROTOCOLS[m_eProtocolType] +
-                           twitterDefaults::TWITCURL_FAVORITECREATE_URL + statusId +
-                           twitCurlDefaults::TWITCURL_EXTENSIONFORMATS[m_eApiFormatType];
+    std::string buildUrl = std::string buildUrl = twitCurlDefaults::TWITCURL_PROTOCOLS[m_eProtocolType] +
+    twitterDefaults::TWITCURL_FAVORITECREATE_URL +
+    twitCurlDefaults::TWITCURL_EXTENSIONFORMATS[m_eApiFormatType]+
+    twitCurlDefaults::TWITCURL_URL_SEP_QUES+"id="+ statusId;
 
     /* Send some dummy data in POST */
     std::string dummyData = twitCurlDefaults::TWITCURL_TEXTSTRING +
@@ -1142,9 +1143,10 @@ bool twitCurl::favoriteCreate( const std::string& statusId )
 bool twitCurl::favoriteDestroy( const std::string& statusId )
 {
     /* Prepare URL */
-    std::string buildUrl = twitCurlDefaults::TWITCURL_PROTOCOLS[m_eProtocolType] +
-                           twitterDefaults::TWITCURL_FAVORITEDESTROY_URL + statusId +
-                           twitCurlDefaults::TWITCURL_EXTENSIONFORMATS[m_eApiFormatType];
+    std::string buildUrl = std::string buildUrl = twitCurlDefaults::TWITCURL_PROTOCOLS[m_eProtocolType] +
+    twitterDefaults::TWITCURL_FAVORITECREATE_URL +
+    twitCurlDefaults::TWITCURL_EXTENSIONFORMATS[m_eApiFormatType]+
+    twitCurlDefaults::TWITCURL_URL_SEP_QUES+"id="+ statusId;
 
     /* Perform DELETE */
     return performDelete( buildUrl );
